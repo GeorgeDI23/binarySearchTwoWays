@@ -29,4 +29,18 @@ public class BinarySearchTest {
 
     }
 
+    @Test
+    public void binarySearchRecursiveTest(){
+        //Given
+        Integer[] givenArray = {1, 4, 5, 23, 82, 99, 111};
+        Integer expected = 99;
+
+        //When
+        Integer retrievedIndex = search.recursiveBinarySearch(givenArray, expected, 0);
+        Integer actual = givenArray[retrievedIndex];
+
+        //Then
+        assertEquals(expected, actual);
+
+    }
 }
